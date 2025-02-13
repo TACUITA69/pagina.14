@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Valentín</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #f567ab;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        .heart {
+            position: relative;
+            left: 50%;
+            top: 150px;
+            width: auto;
+            transform: translate(-50%);
+            display: inline-block;
+            z-index: 2;
+        }
+        .bouquet {
+            position: relative;
+            width: 250px;
+            height: 350px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-end;
+            animation: move 2s infinite alternate ease-in-out;
+        }
+        .stem {
+            width: 6px;
+            height: 120px;
+            background-color: green;
+            position: absolute;
+            bottom: 0;
+            border-radius: 3px;
+        }
+        .rose {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: yellow;
+            top: 0;
+            clip-path: polygon(50% 0%, 65% 20%, 100% 35%, 80% 55%, 85% 85%, 50% 100%, 15% 85%, 20% 55%, 0% 35%, 35% 20%);
+        }
+        .rose:nth-child(1) { left: 20px; top: 20px; }
+        .rose:nth-child(2) { left: 60px; top: 0px; }
+        .rose:nth-child(3) { left: 100px; top: 20px; }
+        .rose:nth-child(4) { left: 40px; top: 60px; }
+        .rose:nth-child(5) { left: 80px; top: 60px; }
+        .ribbon {
+            width: 50px;
+            height: 20px;
+            background-color: red;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 10px;
+        }
+        @keyframes move {
+            0% { transform: translateX(-10px); }
+            100% { transform: translateX(10px); }
+        }
+        .container {
+            background-color: red;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        h1 {
+            color: white;
+            font-size: 24px;
+            margin-top: 10px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #ff4d6d;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <div class="bouquet">
+        <div class="rose"></div>
+        <div class="rose"></div>
+        <div class="rose"></div>
+        <div class="rose"></div>
+        <div class="rose"></div>
+        <div class="stem"></div>
+        <div class="ribbon"></div>
+    </div>
+    <div class="container">
+        <h1>Feliz Dia Del San Valentin</h1>
+        <a href="carta.pdf" download class="btn">Carta</a>
+    </div>
+</body>
+</html>
